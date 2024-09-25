@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import {
@@ -15,11 +17,14 @@ import {
   HoverCardTrigger,
 } from "@/components/ui/hover-card"
 import { Palette, Grid2x2Plus, Braces, GraduationCap } from "lucide-react";
+import backgroundImage from '@/app/svg/bg.svg';
+
 
 export default function Home() {
   return (
     <>
-    <div className="bg-gray-100 min-h-screen flex flex-col items-center justify-center">
+    <div className="bg-center bg-gray-100" style={{ backgroundSize: '250px', backgroundImage: `url(${backgroundImage.src})`, backgroundBlendMode: 'overlay', backgroundColor: 'rgba(243, 244, 246, 0.5)' }}>
+    <div className="min-h-screen flex flex-col items-center justify-center">
       <h1 className="text-3xl md:text-5xl text-gray-800 font-bold text-center mb-8">Alt+F4 Alakulat - Az Azonnali Kilépők</h1>
       <div className="w-full max-w-6xl px-4">
         <div className="flex flex-col md:flex-row gap-4">
@@ -40,7 +45,7 @@ export default function Home() {
                     <div className="flex flex-wrap gap-1">
                       <HoverCard>
                         <HoverCardTrigger>
-                          <Badge className="bg-gray-800 hover:bg-white hover:text-gray-800"><GraduationCap size={16} className="mr-1"></GraduationCap>Projektmenedzser</Badge>
+                          <Badge className="bg-gray-800 hover:bg-white hover:text-gray-800 cursor-default"><GraduationCap size={16} className="mr-1"></GraduationCap>Projektmenedzser</Badge>
                         </HoverCardTrigger>
                         <HoverCardContent>
                           Projektmenedzser: Felelős a projekt tervezéséért és végrehajtásáért.
@@ -48,7 +53,7 @@ export default function Home() {
                       </HoverCard>
                       <HoverCard>
                         <HoverCardTrigger>
-                          <Badge className="bg-sky-600 hover:bg-white hover:text-sky-600"><Braces size={16} className="mr-1"></Braces>Backend fejlesztő</Badge>
+                          <Badge className="bg-sky-600 hover:bg-white hover:text-sky-600 cursor-default"><Braces size={16} className="mr-1"></Braces>Backend fejlesztő</Badge>
                         </HoverCardTrigger>
                         <HoverCardContent>
                           Backend fejlesztő: A szerver oldali logika és adatbázis kezelés felelőse.
@@ -63,7 +68,7 @@ export default function Home() {
                   <TableCell>
                     <HoverCard>
                       <HoverCardTrigger>
-                        <Badge className="bg-sky-600 hover:bg-white hover:text-sky-600"><Braces size={16} className="mr-1"></Braces>Backend fejlesztő</Badge>
+                        <Badge className="bg-sky-600 hover:bg-white hover:text-sky-600 cursor-default"><Braces size={16} className="mr-1"></Braces>Backend fejlesztő</Badge>
                       </HoverCardTrigger>
                       <HoverCardContent>
                         Backend fejlesztő: A szerver oldali logika és adatbázis kezelés felelőse.
@@ -77,7 +82,7 @@ export default function Home() {
                   <TableCell>
                     <HoverCard>
                       <HoverCardTrigger>
-                        <Badge className="bg-pink-500 hover:bg-white hover:text-pink-500"><Palette size={16} className="mr-1"></Palette> Frontend fejlesztő</Badge>
+                        <Badge className="bg-pink-500 hover:bg-white hover:text-pink-500 cursor-default"><Palette size={16} className="mr-1"></Palette> Frontend fejlesztő</Badge>
                       </HoverCardTrigger>
                       <HoverCardContent>
                         Frontend fejlesztő: A felhasználói felület és kliens oldali funkcionalitás fejlesztője.
@@ -91,7 +96,7 @@ export default function Home() {
                   <TableCell>
                     <HoverCard>
                       <HoverCardTrigger>
-                        <Badge className="bg-pink-500 hover:bg-white hover:text-pink-500"><Palette size={16} className="mr-1"></Palette>Frontend fejlesztő</Badge>
+                        <Badge className="bg-pink-500 hover:bg-white hover:text-pink-500 cursor-default"><Palette size={16} className="mr-1"></Palette>Frontend fejlesztő</Badge>
                       </HoverCardTrigger>
                       <HoverCardContent>
                         Frontend fejlesztő: A felhasználói felület és kliens oldali funkcionalitás fejlesztője.
@@ -105,7 +110,7 @@ export default function Home() {
                   <TableCell>
                     <HoverCard>
                       <HoverCardTrigger>
-                        <Badge className="bg-emerald-400 hover:bg-white hover:text-emerald-400"><Grid2x2Plus size={16} className="mr-1"></Grid2x2Plus>UI/UX tervező</Badge>
+                        <Badge className="bg-emerald-400 hover:bg-white hover:text-emerald-400 cursor-default"><Grid2x2Plus size={16} className="mr-1"></Grid2x2Plus>UI/UX tervező</Badge>
                       </HoverCardTrigger>
                       <HoverCardContent>
                         UI/UX tervező: A felhasználói élmény és felület tervezéséért felelős szakember.
@@ -119,19 +124,27 @@ export default function Home() {
           <Card className="flex-1 p-4 md:p-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { text: "H1", className: "bg-[linear-gradient(220.55deg,_#C5EDF5_0%,_#4A879A_100%)]", isReady: true },
-                { text: "H2", className: "bg-[linear-gradient(220.55deg,_#4A879A_0%,_#C5EDF5_100%)]", isReady: false },
-                { text: "H3", className: "bg-[linear-gradient(220.55deg,_#C5EDF5_0%,_#4A879A_100%)]", isReady: false },
-                { text: "H4", className: "bg-[linear-gradient(220.55deg,_#4A879A_0%,_#C5EDF5_100%)]", isReady: false },
-                { text: "H5", className: "bg-[linear-gradient(220.55deg,_#C5EDF5_0%,_#4A879A_100%)]", isReady: false },
-                { text: "Munkanapló", className: "bg-[linear-gradient(220.55deg,_#4A879A_0%,_#C5EDF5_100%)]", isReady: false }
+                { text: "H1", className: "bg-[linear-gradient(220.55deg,_#C5EDF5_0%,_#4A879A_100%)]", isReady: true, link: "https://cdn.reigdev.hu/swt/ProjektTerv-H1.html" },
+                { text: "H2", className: "bg-[linear-gradient(220.55deg,_#4A879A_0%,_#C5EDF5_100%)]", isReady: false, link: "" },
+                { text: "H3", className: "bg-[linear-gradient(220.55deg,_#C5EDF5_0%,_#4A879A_100%)]", isReady: false, link: "" },
+                { text: "H4", className: "bg-[linear-gradient(220.55deg,_#4A879A_0%,_#C5EDF5_100%)]", isReady: false, link: "" },
+                { text: "H5", className: "bg-[linear-gradient(220.55deg,_#C5EDF5_0%,_#4A879A_100%)]", isReady: false, link: "" },
+                { text: "Munkanapló", className: "bg-[linear-gradient(220.55deg,_#4A879A_0%,_#C5EDF5_100%)]", isReady: false, link: "" }
               ].map((item) => (
                 <div key={item.text} className="relative">
                   <Button
                     size="lg"
-                    className={`w-full rounded-lg h-16 md:h-24 text-lg md:text-xl transition-opacity duration-300 hover:opacity-80 ${item.className}`}
+                    className={`w-full rounded-lg h-16 [text-shadow:_0_1px_10px_rgb(0_0_0_/_20%)] md:h-24 text-xl md:text-2xl font-bold text-white transition-all duration-300 hover:opacity-80 ${item.className} group relative`}
+                    onClick={() => item.link && (window.location.href = item.link)}
                   >
-                    {item.text}
+                    <div className="absolute bottom-2 -left-4 flex items-center transition-transform group-hover:translate-x-6">
+                      <span className="opacity-0 transition-opacity duration-300 group-hover:opacity-100 mr-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </span>
+                      {item.text}
+                    </div>
                   </Button>
                   {item.isReady && (
                     <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
@@ -146,6 +159,7 @@ export default function Home() {
           </Card>
         </div>
       </div>
+    </div>
     </div>
     </>
   );
