@@ -48,7 +48,7 @@ export default function Home() {
                           <Badge className="bg-gray-800 hover:bg-white hover:text-gray-800 cursor-default"><GraduationCap size={16} className="mr-1"></GraduationCap>Projektmenedzser</Badge>
                         </HoverCardTrigger>
                         <HoverCardContent>
-                          Projektmenedzser: Felelős a projekt tervezéséért és végrehajtásáért.
+                          Projektmenedzser: Felelős a projekt tervezéséért, végrehajtásáért és dokumentálásáért.
                         </HoverCardContent>
                       </HoverCard>
                       <HoverCard>
