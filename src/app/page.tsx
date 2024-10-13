@@ -18,6 +18,8 @@ import {
 } from "@/components/ui/hover-card"
 import { Palette, Grid2x2Plus, Braces, GraduationCap } from "lucide-react";
 import backgroundImage from '@/app/svg/bg.svg';
+import { ArrowUpRightSquare } from "lucide-react";
+
 
 
 export default function Home() {
@@ -31,14 +33,14 @@ export default function Home() {
           <Card className="flex-1 p-4 md:p-6 overflow-x-auto">
             <Table>
               <TableHeader>
-                <TableRow className="h-12">
+                <TableRow className="h-14">
                   <TableHead className="whitespace-nowrap">Név</TableHead>
                   <TableHead className="whitespace-nowrap">Neptun kód</TableHead>
                   <TableHead className="whitespace-nowrap">Szerep</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
-                <TableRow className="h-auto md:h-12">
+                <TableRow className="h-auto md:h-14">
                   <TableCell className="whitespace-nowrap">Tóth Mátyás</TableCell>
                   <TableCell className="whitespace-nowrap tracking-wider font-mono">OQH5NH</TableCell>
                   <TableCell>
@@ -62,7 +64,7 @@ export default function Home() {
                     </div>
                   </TableCell>
                 </TableRow>
-                <TableRow className="h-auto md:h-12">
+                <TableRow className="h-auto md:h-14">
                   <TableCell className="whitespace-nowrap">Ardon Milán</TableCell>
                   <TableCell className="whitespace-nowrap tracking-wider font-mono">E00XC3</TableCell>
                   <TableCell>
@@ -76,7 +78,7 @@ export default function Home() {
                     </HoverCard>
                   </TableCell>
                 </TableRow>
-                <TableRow className="h-auto md:h-12">
+                <TableRow className="h-auto md:h-14">
                   <TableCell className="whitespace-nowrap">Vay Dominika</TableCell>
                   <TableCell className="whitespace-nowrap tracking-wider font-mono">VM3DIR</TableCell>
                   <TableCell>
@@ -90,7 +92,7 @@ export default function Home() {
                     </HoverCard>
                   </TableCell>
                 </TableRow>
-                <TableRow className="h-auto md:h-12">
+                <TableRow className="h-auto md:h-14">
                   <TableCell className="whitespace-nowrap">Kovács Attila Marcell</TableCell>
                   <TableCell className="whitespace-nowrap tracking-wider font-mono">SEGUV3</TableCell>
                   <TableCell>
@@ -104,7 +106,7 @@ export default function Home() {
                     </HoverCard>
                   </TableCell>
                 </TableRow>
-                <TableRow className="h-auto md:h-12">
+                <TableRow className="h-auto md:h-14">
                   <TableCell className="whitespace-nowrap">Gombkötő Ábel Marcell</TableCell>
                   <TableCell className="whitespace-nowrap tracking-wider font-mono">C67VWA</TableCell>
                   <TableCell>
@@ -125,11 +127,11 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
                 { text: "H1", className: "bg-[linear-gradient(220.55deg,_#C5EDF5_0%,_#4A879A_100%)]", isReady: true, link: "https://cdn.reigdev.hu/swt/ProjektTerv-H1.html" },
-                { text: "H2", className: "bg-[linear-gradient(220.55deg,_#4A879A_0%,_#C5EDF5_100%)]", isReady: false, link: "" },
+                { text: "H2", className: "bg-[linear-gradient(220.55deg,_#4A879A_0%,_#C5EDF5_100%)]", isReady: true, link: "https://h2.reigdev.hu" },
                 { text: "H3", className: "bg-[linear-gradient(220.55deg,_#C5EDF5_0%,_#4A879A_100%)]", isReady: false, link: "" },
                 { text: "H4", className: "bg-[linear-gradient(220.55deg,_#4A879A_0%,_#C5EDF5_100%)]", isReady: false, link: "" },
                 { text: "H5", className: "bg-[linear-gradient(220.55deg,_#C5EDF5_0%,_#4A879A_100%)]", isReady: false, link: "" },
-                { text: "Munkanapló", className: "bg-[linear-gradient(220.55deg,_#4A879A_0%,_#C5EDF5_100%)]", isReady: false, link: "" }
+                { text: "Munkanapló", className: "bg-[linear-gradient(220.55deg,_#4A879A_0%,_#C5EDF5_100%)]", isReady: true, link: "/worklog" }
               ].map((item) => (
                 <div key={item.text} className="relative">
                   <Button
@@ -155,7 +157,13 @@ export default function Home() {
                   )}
                 </div>
               ))}
+
+
+
             </div>
+            <a href="https://h2.reigdev.hu/#szotar" target="_blank">
+            <p className="text-center mt-3 tracking-widest text-xl text-[#4A879A] underline-offset-4 hover:underline">SZÓTÁR<ArrowUpRightSquare size={16} className="ml-1 inline-block -translate-y-[0.1rem]"/></p>
+            </a>
           </Card>
         </div>
       </div>
